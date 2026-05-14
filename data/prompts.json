@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "description": "Fixed benchmark workload for llama.cpp inference experiments.",
+    "generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "repeat_penalty": 1.0,
+      "seed": 42,
+      "n_predict": 128
+    },
+    "notes": [
+      "Use this same prompt set for all inference experiments.",
+      "Discard warmup runs from reported results.",
+      "Run three measured trials per configuration and report mean ± standard deviation.",
+      "The three mandatory prompts must always be included in final reporting."
+    ]
+  },
+  "prompts": [
+    {
+      "id": "mandatory_short_capital_france",
+      "category": "short",
+      "mandatory": true,
+      "prompt": "What is the capital of France?"
+    },
+    {
+      "id": "short_01_quantization_simple",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "Explain model quantization in simple terms. Include why it can reduce memory usage and why it may affect output quality."
+    },
+    {
+      "id": "short_02_latency_throughput",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "Explain the difference between latency and throughput in a language model inference benchmark. Give one practical example."
+    },
+    {
+      "id": "short_03_cpu_inference",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "List three reasons why running a large language model on CPU-only hardware can be slower than running it on a GPU."
+    },
+    {
+      "id": "short_04_reproducibility",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "List four settings that should be fixed to make language model inference benchmarks reproducible across repeated runs."
+    },
+    {
+      "id": "short_05_slurm",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "What is SLURM used for in high-performance computing, and why is it useful for controlled benchmarking?"
+    },
+    {
+      "id": "short_06_tokenization",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "Explain what tokenization means in large language models. Include an example where one word may become multiple tokens."
+    },
+    {
+      "id": "short_07_memory_peak",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "Why is peak memory usage important when benchmarking local large language model inference?"
+    },
+    {
+      "id": "short_08_warmup",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "Explain why benchmark warmup runs are often discarded before reporting final measurements."
+    },
+    {
+      "id": "short_09_json_result",
+      "category": "short",
+      "mandatory": false,
+      "prompt": "Create a compact JSON object for one inference benchmark result with fields for model, prompt_id, ttft_s, tpot_s, throughput, and memory_peak_mb."
+    },
+    {
+      "id": "mandatory_medium_ml_vs_dl",
+      "category": "medium",
+      "mandatory": true,
+      "prompt": "Explain the key differences between machine learning and deep learning, and provide an example of each."
+    },
+    {
+      "id": "medium_01_memory_bandwidth",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "A CPU inference benchmark is often limited by memory bandwidth rather than raw arithmetic throughput. During autoregressive decoding, the model repeatedly reads large weight matrices while producing one token at a time. Even when the processor has many cores, those cores may wait for data to arrive from memory. Based on this description, why is memory bandwidth important, and how could quantization improve decoding speed?"
+    },
+    {
+      "id": "medium_02_prompt_length",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "Prompt length changes the cost of inference. Before generating the first output token, the model must process the input prompt during the prefill phase. A short prompt has a small prefill cost, while a long prompt can spend significant time building attention state before decoding begins. How should prompt length affect TTFT and total runtime?"
+    },
+    {
+      "id": "medium_03_resource_monitoring",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "Resource monitoring provides context for benchmark results. CPU utilisation can show whether a workload is using available cores effectively, while memory measurements can reveal whether the model approaches the available RAM limit. How should CPU utilisation and memory usage be interpreted together with latency and throughput?"
+    },
+    {
+      "id": "medium_04_generation_params",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "Generation parameters affect both benchmark comparability and output text. Temperature changes randomness, maximum generated tokens changes runtime, and sampling options can slightly affect computation. Which generation parameters should be fixed in an inference benchmark, and why?"
+    },
+    {
+      "id": "medium_05_cli_limits",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "The llama.cpp command line interface can generate text directly from a local GGUF model file. This avoids running an HTTP server, but stdout does not necessarily expose exact internal token boundaries. What can still be measured from CLI output, and what limitations should be documented?"
+    },
+    {
+      "id": "medium_06_energy",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "Energy measurement can add another dimension to benchmark results. A configuration that is slightly slower may consume much less power, while a faster configuration may draw more energy overall. Explain how energy results should be interpreted and what limitations should be mentioned when using Intel RAPL counters."
+    },
+    {
+      "id": "medium_07_reporting",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "A benchmark report should be reproducible. It should include hardware node type, software versions, model file, quantization format, command-line arguments, prompt set, warmup policy, number of trials, and raw measurement files. Draft a concise checklist for reporting a controlled inference benchmark."
+    },
+    {
+      "id": "medium_08_tpot",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "Time per output token measures the steady-state decoding phase after generation has started. It is different from time to first token, which includes prompt processing and startup overhead. Explain why TTFT and TPOT should both be reported in language model inference benchmarks."
+    },
+    {
+      "id": "medium_09_cache_effects",
+      "category": "medium",
+      "mandatory": false,
+      "prompt": "Benchmark results can vary because of process startup, filesystem caching, CPU frequency scaling, and background system activity. Explain how cache effects and system noise can influence repeated llama.cpp runs, and how warmups and repeated trials help reduce misleading conclusions."
+    },
+    {
+      "id": "mandatory_long_transformer_cpu_quantization",
+      "category": "long",
+      "mandatory": true,
+      "prompt": "The transformer architecture, introduced in the paper “Attention is All You Need” by Vaswani et al. in 2017, has become the foundation for most modern large language models. Unlike recurrent neural networks, which process sequences sequentially, transformers process all tokens in parallel using self-attention mechanisms. This allows better parallelisation during training and has proven more effective at capturing long-range dependencies in text. When deploying transformers for inference on CPU, the main bottlenecks are the model’s large memory footprint and the repeated loading of weights during the decoding phase. Based on this context, what are the main challenges when running large transformer models on CPU-only systems, and how might quantisation help address these challenges?"
+    },
+    {
+      "id": "long_01_reproducible_benchmarking",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "Reproducible benchmarking of language model inference requires careful control over the workload, runtime environment, and measurement method. The workload should include prompts of different lengths because prefill and decoding stress different parts of the system. Short prompts emphasize process startup and initial response latency, medium prompts include realistic instruction following, and long prompts stress context processing and memory use. The runtime environment should be kept consistent by using the same node type, scheduler allocation, software modules, and model files. Measurements should include raw logs rather than only final averages, because raw data makes it possible to inspect outliers and debug unexpected behavior. Based on this context, design a benchmark methodology for comparing two llama.cpp configurations on CPU-only nodes."
+    },
+    {
+      "id": "long_02_quantization_tradeoffs",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "Quantization reduces the number of bits used to represent model weights. In CPU inference, this can reduce memory footprint and improve effective memory bandwidth because fewer bytes need to be loaded during each matrix operation. However, quantization can also introduce accuracy loss, and different quantization schemes have different speed and quality tradeoffs. Some formats are designed for fast inference, while others prioritize preserving model quality. A complete benchmark should therefore measure not only latency and throughput but also whether generated outputs remain acceptable for the intended task. Explain the main tradeoffs involved in quantizing a transformer model for CPU inference."
+    },
+    {
+      "id": "long_03_ttft_tpot_interpretation",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "Time to first token and time per output token capture different phases of autoregressive language model inference. Time to first token includes prompt processing, initialization overhead, and the work required to produce the first generated token. Time per output token focuses on the steady-state decoding loop after generation has begun. A system can have high TTFT but good TPOT if prompt processing is expensive but decoding is efficient. Conversely, a system can respond quickly at first but decode slowly if memory bandwidth or thread synchronization limits each subsequent token. Given this explanation, how would you interpret a benchmark where long prompts have much higher TTFT but similar TPOT to short prompts?"
+    },
+    {
+      "id": "long_04_resource_logging",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "Resource monitoring provides context for performance measurements. CPU utilisation can show whether a run used the expected number of cores. Memory measurements can show whether a model approaches the available RAM limit or whether longer contexts increase memory pressure. Energy readings can reveal efficiency differences that are not obvious from latency alone. However, monitoring itself has limitations: sampling once per second can miss short spikes, operating system counters may include other activity, and energy interfaces may not exist on all machines. Discuss how CPU, memory, and energy measurements should be collected and reported for llama.cpp experiments."
+    },
+    {
+      "id": "long_05_slurm_controlled_execution",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "On shared high-performance computing clusters, scheduler configuration can influence benchmark results. Running on different node types may change CPU model, memory bandwidth, cache size, and NUMA topology. Different software modules may change compiler versions, runtime libraries, or llama.cpp build behavior. Controlled execution means that each configuration is evaluated under the same scheduler settings wherever possible, including partition, node type, CPU count, memory allocation, and loaded modules. Explain why controlled SLURM execution matters when comparing inference engines or model formats."
+    },
+    {
+      "id": "long_06_cli_vs_server",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "Language model inference can be benchmarked through a command line interface or through a server API. A CLI benchmark is simple and avoids network overhead, but process startup may be included unless the tool is designed to keep the model loaded. A server benchmark can separate model loading from request latency and may expose streaming token events, but it introduces HTTP overhead and server scheduling behavior. The best choice depends on the research question. Compare CLI and server-based benchmarking for llama.cpp and state what each method measures."
+    },
+    {
+      "id": "long_07_raw_logs",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "Raw measurement logs are important because aggregate statistics can hide important details. For example, one run may have a much higher time to first token due to temporary filesystem contention, while the other runs are stable. A CSV summary is convenient for plotting, but JSON logs with per-event timestamps allow deeper analysis. Resource logs can reveal whether a latency spike coincided with high memory pressure or low CPU utilisation. Good benchmark infrastructure therefore stores both machine-readable summaries and detailed raw data for every trial. Why should raw benchmark measurements be stored, and what files would you include in a benchmark repository?"
+    },
+    {
+      "id": "long_08_cpu_bottlenecks",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "Running transformer models on CPU-only systems is challenging because transformers require large matrix operations and repeated access to model weights. During the prefill phase, the system processes all prompt tokens and builds the attention state. During decoding, the system generates one token at a time and repeatedly applies the model layers. If the model is large, the weights may dominate memory traffic, and performance may depend more on memory hierarchy than on peak arithmetic throughput. Identify the likely CPU bottlenecks in this scenario and propose practical mitigation strategies."
+    },
+    {
+      "id": "long_09_prompt_categories",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "A benchmark prompt set should include multiple prompt lengths because different applications use language models in different ways. A chatbot question may be short, a summarization request may include several paragraphs, and a retrieval-augmented generation task may include long context passages before the final question. If a benchmark only uses short prompts, it may underestimate memory pressure and prefill latency. If it only uses long prompts, it may not represent interactive use where fast initial response is important. Explain why short, medium, and long prompt categories are useful for inference benchmarking."
+    },
+    {
+      "id": "long_10_final_report",
+      "category": "long",
+      "mandatory": false,
+      "prompt": "A final benchmark report should connect measurements to conclusions. Tables can report mean and standard deviation for TTFT, TPOT, throughput, peak memory, and energy. Plots can show how metrics change across prompt categories or quantization formats. Generated outputs should be saved for mandatory prompts so that readers can inspect whether faster configurations still produce reasonable responses. The report should also document limitations, such as approximate token timing from CLI stdout or missing RAPL support on some machines. Draft the structure of a results section for a llama.cpp CPU inference benchmark report."
+    }
+  ]
+}

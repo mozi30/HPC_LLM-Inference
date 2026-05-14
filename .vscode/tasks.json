@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "TeX: autobuild documentation.tex",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "if command -v latexmk >/dev/null 2>&1; then exec latexmk -pdf -pvc -interaction=nonstopmode -file-line-error -outdir=build documentation.tex; fi; echo 'latexmk is required for autobuild. Install TeX Live or another LaTeX distribution with latexmk.' >&2; exit 1"
+            ],
+            "isBackground": true,
+            "group": "build",
+            "problemMatcher": [
+                "$latexmk"
+            ]
+        }
+    ]
+}

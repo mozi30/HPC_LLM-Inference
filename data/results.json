@@ -1,0 +1,716 @@
+{
+  "models": [
+    {
+      "name": "Meta-Llama-3.1-8B-Instruct-Q4_K_M",
+      "runs": [
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M"
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 10.95,
+              "stddev": 0.01
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 12.88,
+              "stddev": 0.22
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M"
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 32,
+              "tokens_per_second": 3.43,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 12.97,
+              "stddev": 0.04
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M"
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 30.83,
+              "stddev": 0.03
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 13.37,
+              "stddev": 0.11
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M"
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 2048,
+              "tokens_per_second": 27.24,
+              "stddev": 0.17
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 12.95,
+              "stddev": 0.04
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M"
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 10.96,
+              "stddev": 0.01
+            },
+            "token_generation": {
+              "tokens": 32,
+              "tokens_per_second": 12.64,
+              "stddev": 0.02
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M"
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 10.97,
+              "stddev": 0.01
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 12.46,
+              "stddev": 0.02
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M"
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 10.96,
+              "stddev": 0.02
+            },
+            "token_generation": {
+              "tokens": 512,
+              "tokens_per_second": 11.98,
+              "stddev": 0.27
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 8,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 27.81,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 2.82,
+              "stddev": 0.00
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 16,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 29.08,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 5.42,
+              "stddev": 0.00
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 4.58,
+            "parameters_billions": 8.03,
+            "quantization": "Q4_K_M",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 29.89,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 12.53,
+              "stddev": 0.00
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SmolLM2-135M-Instruct-Q4_K_M",
+      "runs": [
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 32,
+              "tokens_per_second": 24.28,
+              "stddev": 0.05
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 95.66,
+              "stddev": 9.62
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 89.88,
+              "stddev": 0.12
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 102.30,
+              "stddev": 0.80
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 290.43,
+              "stddev": 0.42
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 80.13,
+              "stddev": 0.71
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 2048,
+              "tokens_per_second": 237.11,
+              "stddev": 3.80
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 58.21,
+              "stddev": 13.30
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 89.96,
+              "stddev": 0.06
+            },
+            "token_generation": {
+              "tokens": 32,
+              "tokens_per_second": 101.12,
+              "stddev": 0.43
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 89.85,
+              "stddev": 0.05
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 99.71,
+              "stddev": 1.61
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 89.77,
+              "stddev": 0.13
+            },
+            "token_generation": {
+              "tokens": 512,
+              "tokens_per_second": 95.90,
+              "stddev": 1.00
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 89.53,
+              "stddev": 0.80
+            },
+            "token_generation": {
+              "tokens": 2048,
+              "tokens_per_second": 78.15,
+              "stddev": 0.17
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 8,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 261.84,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 37.92,
+              "stddev": 0.00
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 16,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 292.63,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 60.18,
+              "stddev": 0.00
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_mib": 98.87,
+            "parameters_millions": 134.52,
+            "quantization": "Q4_K_M",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 293.60,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 78.49,
+              "stddev": 0.00
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "gemma-2-2b-it-Q8_0",
+      "runs": [
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 32,
+              "tokens_per_second": 11.41,
+              "stddev": 0.05
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 14.59,
+              "stddev": 0.04
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 36.68,
+              "stddev": 0.20
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 14.59,
+              "stddev": 0.07
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 100.69,
+              "stddev": 0.41
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 14.60,
+              "stddev": 0.05
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 2048,
+              "tokens_per_second": 85.95,
+              "stddev": 0.06
+            },
+            "token_generation": {
+              "tokens": 1,
+              "tokens_per_second": 14.66,
+              "stddev": 0.03
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 36.88,
+              "stddev": 0.14
+            },
+            "token_generation": {
+              "tokens": 32,
+              "tokens_per_second": 17.02,
+              "stddev": 0.24
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 35.69,
+              "stddev": 2.27
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 16.31,
+              "stddev": 1.27
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 36.94,
+              "stddev": 0.03
+            },
+            "token_generation": {
+              "tokens": 512,
+              "tokens_per_second": 16.69,
+              "stddev": 0.11
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 3
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 128,
+              "tokens_per_second": 36.84,
+              "stddev": 0.11
+            },
+            "token_generation": {
+              "tokens": 2048,
+              "tokens_per_second": 15.26,
+              "stddev": 0.16
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 8,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 83.42,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 13.36,
+              "stddev": 0.00
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 16,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 72.38,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 19.30,
+              "stddev": 0.00
+            }
+          }
+        },
+        {
+          "metadata": {
+            "backend": "BLAS",
+            "threads": 48,
+            "model_size_gib": 2.59,
+            "parameters_billions": 2.61,
+            "quantization": "Q8_0",
+            "repeats": 1
+          },
+          "results": {
+            "prompt_processing": {
+              "tokens": 512,
+              "tokens_per_second": 100.88,
+              "stddev": 0.00
+            },
+            "token_generation": {
+              "tokens": 128,
+              "tokens_per_second": 17.18,
+              "stddev": 0.00
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

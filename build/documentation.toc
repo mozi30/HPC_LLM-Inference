@@ -1,0 +1,33 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Background}{2}{section.2}%
+\contentsline {section}{\numberline {3}Methodology}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Performance model pipeline}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Track A model deepdive pipeline}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Analytical Model Proposal}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}TTFT Assumption}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Models Tested}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Results}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Calculated TTFT Results}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Model Comparison}{6}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Summary Metrics}{6}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Thread Scaling}{6}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Throughput}{6}{subsubsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.3}Model deepdive - Gemma-2-2b-it-Q4}{7}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Thread Count and Memory Usage}{7}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Concurrency Throughput}{9}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Context Length}{11}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}TPOT Baseline and Measured TPOT}{11}{subsubsection.5.3.4}%
+\contentsline {section}{\numberline {6}Discussion}{13}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{14}{section.7}%
+\contentsline {section}{\numberline {8}LLM Inference Engine Analysis}{15}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Meta-Llama-3.1-8B-Instruct-Q4\_K\_M}{15}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Gemma-2-2b-it-Q8\_0}{15}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}SmolLM2-1.7B-Instruct-Q4\_K\_M}{15}{subsection.8.3}%
+\contentsline {section}{\numberline {A}Results Tables}{15}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Model Comparison}{15}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Model deepdive - Gemma-2-2b-it-Q4}{16}{subsection.A.2}%
+\contentsline {subsubsection}{\numberline {A.2.1}Thread Count and Memory Usage}{16}{subsubsection.A.2.1}%
+\contentsline {subsubsection}{\numberline {A.2.2}Concurrency Throughput}{16}{subsubsection.A.2.2}%
+\contentsline {subsubsection}{\numberline {A.2.3}Context Length}{16}{subsubsection.A.2.3}%
+\contentsline {subsubsection}{\numberline {A.2.4}TPOT by Thread Count}{17}{subsubsection.A.2.4}%
+\contentsline {subsubsection}{\numberline {A.2.5}TPOT by Decode Length}{17}{subsubsection.A.2.5}%
