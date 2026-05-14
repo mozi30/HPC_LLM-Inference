@@ -1,5 +1,9 @@
 # LLM Inference
 by Moritz Anton Zideck
+
+## Documentation
+[LLM-Inference](LLM-Inference.pdf) contains the full documentation of the LLM Inference Experiment.
+
 ## Models
 All models can be downloaded from HuggingFace with different quantisations.
 
